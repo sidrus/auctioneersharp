@@ -6,7 +6,7 @@
    <Modules>
     <Module Name="auctioneersharp.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'AuctioneerSharp.dll' with a strong name key.</Issue>
       </Message>
      </Messages>
@@ -17,7 +17,7 @@
          <Members>
           <Member Name="#itemData" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'AuctionItem.itemData' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -28,35 +28,35 @@
          <Members>
           <Member Name="#image" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'ScanImage.image' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#lastScanTime" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'ScanImage.lastScanTime' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Sessions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanImage.cs" Line="35">Change 'List&lt;Session&gt;' in 'ScanImage.Sessions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Statistics" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanImage.cs" Line="25">Change 'ScanStatistics' in 'ScanImage.Statistics' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#time" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'ScanImage.time' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -67,16 +67,16 @@
          <Members>
           <Member Name="#.ctor(LuaInterface.LuaTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="DependsOnFix">
+            <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="110">Because the behavior of 'Convert.ToBoolean(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToBoolean(object, IFormatProvider)'. If the result of 'Convert.ToBoolean(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="DependsOnFix">
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="99">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="100">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="107">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="108">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="DependsOnFix">
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="96">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="97">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="98">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
@@ -94,21 +94,21 @@
         </Type>
         <Type Name="ScanStatistics" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">Rename 'ScanStatistics' to end in 'Collection'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Session" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">Rename 'Session' to end in 'Collection'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#rope" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:15:58Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Session.rope' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
