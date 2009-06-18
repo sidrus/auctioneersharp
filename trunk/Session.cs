@@ -3,8 +3,6 @@
  * User: Brandon
  * Date: 6/17/2009
  * Time: 11:15 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using System.Collections;
@@ -13,9 +11,6 @@ using LuaInterface;
 
 namespace AuctioneerSharp
 {
-	/// <summary>
-	/// Description of Sessions.
-	/// </summary>
 	public class Session : List<AuctionItem>
 	{
 		private string rope;
