@@ -8,9 +8,6 @@ using System;
 
 namespace AuctioneerSharp
 {
-	/// <summary>
-	/// Description of Constants.
-	/// </summary>
 	public static class Constants
 	{
 		public const string MasterTablePath = "AucScanData.scans";

@@ -11,9 +11,6 @@ using LuaInterface;
 
 namespace AuctioneerSharp
 {
-	/// <summary>
-	/// Description of ScanImage.
-	/// </summary>
 	public class ScanImage
 	{
 		private LuaTable scanData;

@@ -9,9 +9,6 @@ using LuaInterface;
 
 namespace AuctioneerSharp
 {
-	/// <summary>
-	/// Description of ScanStatisticItem.
-	/// </summary>
 	public class ScanStatisticItem
 	{
 		private int elapsed;		

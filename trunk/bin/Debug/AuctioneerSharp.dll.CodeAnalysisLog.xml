@@ -6,7 +6,7 @@
    <Modules>
     <Module Name="auctioneersharp.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'AuctioneerSharp.dll' with a strong name key.</Issue>
       </Message>
      </Messages>
@@ -15,10 +15,77 @@
        <Types>
         <Type Name="AuctionItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Members>
+          <Member Name="#.ctor(LuaInterface.LuaTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="AuctionItem.cs" Line="50">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'AuctionItem.AuctionItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="AuctionItem.cs" Line="53">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'AuctionItem.AuctionItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
           <Member Name="#itemData" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'AuctionItem.itemData' is never used or is only ever assigned to. Use this field or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SubType" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="SubType" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="AuctionItem.cs" Line="32">The compound word 'SubType' in member name 'AuctionItem.SubType' exists as a discrete term. If your usage is intended to be single word, case it as 'Subtype' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Type" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
+             <Issue Name="BaseType" Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="AuctionItem.cs" Line="28">The property name 'AuctionItem.Type' is confusing given the existence of inherited method 'object.GetType()'. Rename or remove this property.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AuctionItemField" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Flag" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Flag" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+             <Issue Name="MemberNoAlternate" Certainty="95" Level="Error">Replace the term 'Flag' in member name 'AuctionItemField.Flag' with an appropriate alternate or remove it entirely.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Flags" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
+           <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'Flags' that has a value of zero with a suggested name of 'None'.</Issue>
+          </Message>
+          <Message TypeName="MarkEnumsWithFlags" Category="Microsoft.Design" CheckId="CA1027" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">The constituent members of 'Flags' appear to represent flags that can be combined rather than discrete values. If this is correct, mark the enumeration with FlagsAttribute.</Issue>
+          </Message>
+          <Message TypeName="OnlyFlagsEnumsShouldHavePluralNames" Category="Microsoft.Naming" CheckId="CA1717" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+           <Issue Certainty="75" Level="Error">If the name 'Flags' is plural, change it to its singular form.</Issue>
+          </Message>
+          <Message Id="Flags" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+           <Issue Name="TypeNoAlternate" Certainty="95" Level="Error">Replace the term 'Flags' in type name 'Flags' with an appropriate alternate or remove it entirely.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ItemType" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Holdable" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Holdable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Holdable' in member name 'ItemType.Holdable' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OffHand" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="OffHand" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'OffHand' in member name 'ItemType.OffHand' exists as a discrete term. If your usage is intended to be single word, case it as 'Offhand' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -28,35 +95,35 @@
          <Members>
           <Member Name="#image" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'ScanImage.image' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#lastScanTime" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'ScanImage.lastScanTime' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Sessions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanImage.cs" Line="35">Change 'List&lt;Session&gt;' in 'ScanImage.Sessions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanImage.cs" Line="30">Change 'List&lt;Session&gt;' in 'ScanImage.Sessions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Statistics" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanImage.cs" Line="25">Change 'ScanStatistics' in 'ScanImage.Statistics' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanImage.cs" Line="20">Change 'ScanStatistics' in 'ScanImage.Statistics' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#time" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'ScanImage.time' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -67,26 +134,26 @@
          <Members>
           <Member Name="#.ctor(LuaInterface.LuaTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="110">Because the behavior of 'Convert.ToBoolean(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToBoolean(object, IFormatProvider)'. If the result of 'Convert.ToBoolean(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="105">Because the behavior of 'Convert.ToBoolean(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToBoolean(object, IFormatProvider)'. If the result of 'Convert.ToBoolean(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="99">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="100">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="107">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="108">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="94">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="95">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="102">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="103">Because the behavior of 'Convert.ToDouble(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToDouble(object, IFormatProvider)'. If the result of 'Convert.ToDouble(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="DependsOnFix">
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="91">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="92">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="93">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="96">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="97">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="98">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="99">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="100">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="101">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="102">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="103">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="104">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="105">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="106">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Certainty="95" Level="Error" Path="c:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp" File="ScanStatisticItem.cs" Line="109">Because the behavior of 'Convert.ToInt32(object)' could vary based on the current user's locale settings, replace this call in 'ScanStatisticItem.ScanStatisticItem(LuaTable)' with a call to 'Convert.ToInt32(object, IFormatProvider)'. If the result of 'Convert.ToInt32(object, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -94,21 +161,21 @@
         </Type>
         <Type Name="ScanStatistics" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">Rename 'ScanStatistics' to end in 'Collection'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Session" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">Rename 'Session' to end in 'Collection'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#rope" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 05:27:12Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2009-06-18 06:33:21Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'Session.rope' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -143,6 +210,16 @@
    <MessageLevel Certainty="75">Warning</MessageLevel>
    <File Name="PerformanceRules.dll" Version="9.0.0.0" />
   </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/bb264474(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="NamingRules.dll" Version="9.0.0.0" />
+  </Rule>
   <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
    <Name>Do not expose generic lists</Name>
    <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
@@ -153,12 +230,62 @@
    <MessageLevel Certainty="95">Error</MessageLevel>
    <File Name="DesignRules.dll" Version="9.0.0.0" />
   </Rule>
+  <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+   <Name>Enums should have zero value</Name>
+   <Description>An enum should generally have a zero value. If the enum is not decorated with the Flags attribute, it should have a member with a value of zero that represents the empty state. Optionally, this value is named 'None'. For a Flags-attributed enum, a zero-valued member is optional and, if it exists, should always be named 'None'. This value should indicate that no values have been set in the enum. Using a zero-valued member for other purposes is contrary to the use of the Flags attribute in that the bitwise AND and OR operators are useless with the member.</Description>
+   <Resolution Name="NotFlagsNoZeroValue">Add a member to {0} that has a value of zero with a suggested name of 'None'.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182149(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/bb264492(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="NamingRules.dll" Version="9.0.0.0" />
+  </Rule>
   <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
    <Name>Identifiers should have correct suffix</Name>
    <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
    <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
    <Owner />
    <Url>http://msdn2.microsoft.com/library/ms182244(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="NamingRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkEnumsWithFlags" Category="Microsoft.Design" CheckId="CA1027">
+   <Name>Mark enums with FlagsAttribute</Name>
+   <Description>The enumeration appears to be made up of combinable flags. If this true, apply the Flags attribute to the enumeration.</Description>
+   <Resolution Name="Default">The constituent members of {0} appear to represent flags that can be combined rather than discrete values. If this is correct, mark the enumeration with FlagsAttribute.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182159(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="OnlyFlagsEnumsShouldHavePluralNames" Category="Microsoft.Naming" CheckId="CA1717">
+   <Name>Only FlagsAttribute enums should have plural names</Name>
+   <Description>Plural names indicate that the values of the enumeration can be combined. For example, an enumeration named 'Day' indicates a single day, and an enumeration named 'Days' indicates multiple days. Enumeration values should be combined using the bit-wise OR operator only if the Flags attribute is present on the enumeration.</Description>
+   <Resolution Name="Default">If the name {0} is plural, change it to its singular form.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/bb264487(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="NamingRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721">
+   <Name>Property names should not match get methods</Name>
+   <Description>A Get method was found with the same name as a property. Get methods and properties should have names that clearly distinguish their function. See the design guidelines for information regarding choosing properties over methods.</Description>
+   <Resolution Name="BaseType">The property name {0} is confusing given the existence of inherited method {1}. Rename or remove this property.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182253(VS.90).aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Error</MessageLevel>
    <File Name="NamingRules.dll" Version="9.0.0.0" />
@@ -172,6 +299,17 @@
    <Email>[none]</Email>
    <MessageLevel Certainty="95">Error</MessageLevel>
    <File Name="GlobalizationRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+   <Name>Use preferred terms</Name>
+   <Description>Use preferred terms over deprecated alternates.</Description>
+   <Resolution Name="MemberNoAlternate">Replace the term '{0}' in member name {1} with an appropriate alternate or remove it entirely.</Resolution>
+   <Resolution Name="TypeNoAlternate">Replace the term '{0}' in type name {1} with an appropriate alternate or remove it entirely.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182258(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="NamingRules.dll" Version="9.0.0.0" />
   </Rule>
  </Rules>
  <Localized>
