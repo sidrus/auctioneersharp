@@ -3,8 +3,6 @@
  * User: Brandon
  * Date: 6/17/2009
  * Time: 9:14 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 
