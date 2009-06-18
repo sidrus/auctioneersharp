@@ -11,19 +11,19 @@ using LuaInterface;
 
 namespace AuctioneerSharp
 {
-	public class ScanStatistics : List<ScanStatisticItem>
-	{
-		private LuaTable statistics;
-		
-		public ScanStatistics(LuaTable stats)
-		{
-			this.statistics = stats;
-			if(this.statistics==null)
-				return;
-			
-			// build the list
-			foreach(DictionaryEntry item in statistics) 
-				this.Add(new ScanStatisticItem(item.Value as LuaTable));
-		}
-	}
+    public class ScanStatistics : List<ScanStatisticItem>
+    {
+        private LuaTable statistics;
+
+        public ScanStatistics(LuaTable stats)
+        {
+            this.statistics = stats;
+            if(this.statistics==null)
+                return;
+
+            // build the list
+            foreach(DictionaryEntry item in statistics)
+                this.Add(new ScanStatisticItem(item.Value as LuaTable));
+        }
+    }
 }
