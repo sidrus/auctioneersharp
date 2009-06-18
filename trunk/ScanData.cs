@@ -15,8 +15,14 @@ namespace AuctioneerSharp
 	{
 		internal static Lua luaEngine;
 		
+		private string accountName = "Unknown";
 		private string dataFilePath;
 		private LuaTable mainTable;
+		
+		public string AccountName {
+			get { return accountName; }
+			set { accountName = value; }
+		}
 		
 		public string DataFilePath {
 			get { return this.dataFilePath; }
