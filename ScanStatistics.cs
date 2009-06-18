@@ -11,9 +11,6 @@ using LuaInterface;
 
 namespace AuctioneerSharp
 {
-	/// <summary>
-	/// Description of ScanStatistics.
-	/// </summary>
 	public class ScanStatistics : List<ScanStatisticItem>
 	{
 		private LuaTable statistics;

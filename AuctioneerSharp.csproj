@@ -49,7 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuctionItem.cs" />
+    <Compile Include="AuctionItemFields.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Flags.cs" />
+    <Compile Include="ItemType.cs" />
     <Compile Include="ScanData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScanImage.cs" />
