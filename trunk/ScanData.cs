@@ -14,29 +14,28 @@ namespace AuctioneerSharp
 	public class ScanData : IDisposable
 	{
 		internal static Lua luaEngine;
-		
+
 		private string accountName = "Unknown";
 		private string dataFilePath;
 		private LuaTable mainTable;
-		
+
 		public string AccountName {
 			get { return accountName; }
 			set { accountName = value; }
 		}
-		
 		public string DataFilePath {
 			get { return this.dataFilePath; }
 		}
-		
+
 		public ScanData(string path) {
 			this.dataFilePath = path;
-			
+
 			luaEngine = new Lua();
 			luaEngine.DoFile(dataFilePath);
-			
+
 			mainTable = luaEngine.GetTable(Constants.MasterTablePath);
 		}
-		
+
 		public string[] GetRealmInfo() {
 			string[] realms = new string[mainTable.Keys.Count];
 			mainTable.Keys.CopyTo(realms, 0);
@@ -51,7 +50,7 @@ namespace AuctioneerSharp
 		public ScanImage GetImage(string realm, string faction) {
 			string scanPath = String.Format(CultureInfo.CurrentCulture, "{0}.{1}", realm, faction);
 			LuaTable scanTable = mainTable[scanPath] as LuaTable;
-						
+
 			return new ScanImage(scanTable, realm, faction);
 		}
 		#region IDispose Implementation

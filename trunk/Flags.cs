@@ -8,10 +8,10 @@ using System;
 
 namespace AuctioneerSharp
 {
-	public enum Flags
-	{
-		Dirty = 1,
-		Unseen = 2,
-		Filter = 4,
-	}
+    public enum Flags
+    {
+        Dirty = 1,
+        Unseen = 2,
+        Filter = 4,
+    }
 }
