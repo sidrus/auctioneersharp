@@ -1,0 +1,7 @@
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\bin\Debug\AuctioneerSharp.dll
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\bin\Debug\AuctioneerSharp.pdb
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\obj\Debug\AuctioneerSharp.dll
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\obj\Debug\AuctioneerSharp.pdb
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\bin\Debug\lua51.dll
+C:\Users\Brandon\Documents\SharpDevelop Projects\AuctioneerReader\AuctioneerSharp\bin\Debug\LuaInterface.dll
