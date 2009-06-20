@@ -50,17 +50,17 @@ namespace AuctioneerSharp
         
         /// <summary>
         /// Initializes a new instance of the AuctionItem class using the
-        /// provided <code>LuaTable</code> as a data source.
+        /// provided LuaTable as a data source.
         /// </summary>
-        /// <param name="data">The scan data to use to build the <code>AuctionItem</code>.</param>
+        /// <param name="data">The scan data to use to build the AuctionItem.</param>
         public AuctionItem(LuaTable data)
         {
-            this.name = data[(int)AuctionItemField.Name].ToString();
-            this.itemWowLink = data[(int)AuctionItemField.WowLink].ToString();
-            this.itemLevel = Convert.ToInt32(data[(int)AuctionItemField.ItemLevel]);
-            this.itemType = data[(int)AuctionItemField.ItemType].ToString();
-            this.subType = data[(int)AuctionItemField.ItemSubtype].ToString();
-            this.equipmentSlot = Convert.ToInt32(data[(int)AuctionItemField.EquipmentSlot]);
+            this.name = data[(int)AuctionItemFields.Name].ToString();
+            this.itemWowLink = data[(int)AuctionItemFields.WowLink].ToString();
+            this.itemLevel = Convert.ToInt32(data[(int)AuctionItemFields.ItemLevel]);
+            this.itemType = data[(int)AuctionItemFields.ItemType].ToString();
+            this.subType = data[(int)AuctionItemFields.ItemSubtype].ToString();
+            this.equipmentSlot = Convert.ToInt32(data[(int)AuctionItemFields.EquipmentSlot]);
         }
         
         /// <summary>

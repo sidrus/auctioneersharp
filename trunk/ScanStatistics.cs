@@ -1,21 +1,35 @@
-/*
- * Created by SharpDevelop.
- * User: Brandon
- * Date: 6/17/2009
- * Time: 10:18 PM
- */
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using LuaInterface;
-
+//-----------------------------------------------------------------------
+// <copyright file="ScanStatistics.cs" company="Ejafi Software">
+//      Copyright (c) 2009 All Right Reserved
+// </copyright>
+// <author>Brandon Frie</author>
+// <date>6/17/2009</date>
+// <summary>
+//      A collection of ScanStatisticsItems.
+// </summary>
+//-----------------------------------------------------------------------
 namespace AuctioneerSharp
 {
-    public class ScanStatistics : List<ScanStatisticItem>
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using LuaInterface;
+    
+    /// <summary>
+    /// A collection of ScanStatisticsItems.
+    /// </summary>
+    public class ScanStatisticsCollection : Collection<ScanStatisticItem>
     {
         private LuaTable statistics;
 
-        public ScanStatistics(LuaTable stats)
+        /// <summary>
+        /// Initializes an instance of the ScanStatisticsCollection class
+        /// using the data provided.
+        /// </summary>
+        /// <param name="stats">A lua table with the initialization data.</param>
+        public ScanStatisticsCollection(LuaTable stats) :
+            base(new List<ScanStatisticItem>())
         {
             this.statistics = stats;
             if(this.statistics==null)
