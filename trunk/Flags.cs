@@ -11,7 +11,7 @@
 namespace AuctioneerSharp
 {
     using System;
-    
+
     /// <summary>
     /// Auction scan status flags for Auctioneer records.
     /// </summary>
@@ -22,19 +22,19 @@ namespace AuctioneerSharp
         /// Indicates no flag has been set.
         /// </summary>
         None = 0,
-        
+
         /// <summary>
         /// Indicates that the auction has changed.
         /// </summary>
         Dirty = 1,
-        
+
         /// <summary>
         /// Indicates that this auction was previously unseen.
         /// </summary>
         Unseen = 2,
-        
+
         /// <summary>
-        /// Unknown.
+        /// Unknown flag.
         /// </summary>
         Filter = 4,
     }

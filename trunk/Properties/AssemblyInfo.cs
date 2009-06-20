@@ -1,4 +1,14 @@
-﻿#region Using directives
+﻿//-----------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="Ejafi Software">
+//      Copyright (c) 2009 All Right Reserved
+// </copyright>
+// <author>Brandon Frie</author>
+// <date>6/19/2009</date>
+// <summary>
+//      Specifies various flags relating to the assembly.
+// </summary>
+//-----------------------------------------------------------------------
+#region Using directives
 
 using System;
 using System.Reflection;
