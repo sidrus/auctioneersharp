@@ -1,1 +1,0 @@
-﻿AuctionItem = "return {\"|cff0070dd|Hitem:44671:0:0:0:0:0:-93:1160446044:80|h[Highlord's Padded Legguards of Restoration]|h|r\",167,\"Armor\",\"Mail\",7,1650000,4,1245115491,\"Highlord's Padded Legguards of Restoration\",\"Interface\\\\Icons\\\\INV_Pants_Mail_07\",1,3,nil,72,1650000,0,1750000,0,false,\"Trooney\",0,4964,44671,-93,0,0,1160446044,}"
