@@ -110,7 +110,7 @@ namespace AuctioneerSharp
             this.elapsed = Convert.ToInt32(data[Constants.StatElapsed]);
             this.ended = Convert.ToDouble(data[Constants.StatEnded]);
             this.endTime = Convert.ToDouble(data[Constants.StatEndTime]);
-            this.expiredDeleteCount = Convert.ToInt32(data[Constants.StatEarlyDeleteCount]);
+            this.expiredDeleteCount = Convert.ToInt32(data[Constants.StatExpiredDeleteCount]);
             this.missedCount = Convert.ToInt32(data[Constants.StatMissedCount]);
             this.newCount = Convert.ToInt32(data[Constants.StatNewCount]);
             this.oldCount = Convert.ToInt32(data[Constants.StatOldCount]);
