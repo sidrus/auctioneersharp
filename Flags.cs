@@ -1,17 +1,41 @@
-/*
- * Created by SharpDevelop.
- * User: Brandon
- * Date: 6/18/2009
- * Time: 1:25 AM
- */
-using System;
-
+//-----------------------------------------------------------------------
+// <copyright file="Flags.cs" company="Ejafi Software">
+//      Copyright (c) 2009 All Right Reserved
+// </copyright>
+// <author>Brandon Frie</author>
+// <date>6/19/2009</date>
+// <summary>
+//      Defines an individual item in an Auctioneer scan image.
+// </summary>
+//-----------------------------------------------------------------------
 namespace AuctioneerSharp
 {
+    using System;
+    
+    /// <summary>
+    /// Auction scan status flags for Auctioneer records.
+    /// </summary>
+    [FlagsAttribute()]
     public enum Flags
     {
+        /// <summary>
+        /// Indicates no flag has been set.
+        /// </summary>
+        None = 0,
+        
+        /// <summary>
+        /// Indicates that the auction has changed.
+        /// </summary>
         Dirty = 1,
+        
+        /// <summary>
+        /// Indicates that this auction was previously unseen.
+        /// </summary>
         Unseen = 2,
+        
+        /// <summary>
+        /// Unknown.
+        /// </summary>
         Filter = 4,
     }
 }
