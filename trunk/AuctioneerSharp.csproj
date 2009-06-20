@@ -79,12 +79,12 @@
     <Compile Include="ScanStatisticsCollection.cs">
     </Compile>
     <Compile Include="SessionCollection.cs" />
-    <Compile Include="UnitTests\AuctionItemTest.cs" />
+    <Compile Include="UnitTests\AuctioneerSharpTests.cs" />
     <EmbeddedResource Include="Constants.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <None Include="UnitTests\data\test_data.lua">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="UnitTests\data\Auc-ScanData.lua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
