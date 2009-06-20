@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------
-// <copyright file="ScanStatistics.cs" company="Ejafi Software">
+// <copyright file="ScanStatisticsCollection.cs" company="Ejafi Software">
 //      Copyright (c) 2009 All Right Reserved
 // </copyright>
 // <author>Brandon Frie</author>
@@ -21,10 +21,13 @@ namespace AuctioneerSharp
     /// </summary>
     public class ScanStatisticsCollection : Collection<ScanStatisticItem>
     {
+        /// <summary>
+        /// The raw scan data.
+        /// </summary>
         private LuaTable statistics;
 
         /// <summary>
-        /// Initializes an instance of the ScanStatisticsCollection class
+        /// Initializes a new instance of the ScanStatisticsCollection class
         /// using the data provided.
         /// </summary>
         /// <param name="stats">A lua table with the initialization data.</param>
@@ -32,12 +35,14 @@ namespace AuctioneerSharp
             base(new List<ScanStatisticItem>())
         {
             this.statistics = stats;
-            if(this.statistics==null)
+            if (this.statistics == null) {
                 return;
+            }
 
             // build the list
-            foreach(DictionaryEntry item in statistics)
+            foreach (DictionaryEntry item in this.statistics) {
                 this.Add(new ScanStatisticItem(item.Value as LuaTable));
+            }
         }
     }
 }

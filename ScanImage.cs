@@ -22,51 +22,38 @@ namespace AuctioneerSharp
     /// </summary>
     public class ScanImage
     {
+        /// <summary>
+        /// The raw data from the lua file.
+        /// </summary>
         private LuaTable scanData;
 
+        /// <summary>
+        /// A collection of auctioneer statistics about this image.
+        /// </summary>
         private ScanStatisticsCollection scanStats;
-        
-        /// <summary>
-        /// Gets a collection of statistics about this image.
-        /// </summary>
-        public ScanStatisticsCollection Statistics {
-            get { return scanStats; }
-        }
 
-        //private string image;
+        /// <summary>
+        /// The raw strings (ropes) containing scan data.
+        /// </summary>
         private LuaTable ropes;
-        //private double lastScanTime;
-        //private double time;
 
-        private Collection<SessionCollection> sessions;
-        
         /// <summary>
-        /// Gets a collection of scan sessions in this image.
+        /// A collection of <see cref="SessionCollection" /> data.
         /// </summary>
-        public Collection<SessionCollection> Sessions {
-            get { return sessions; }
-        }
+        private Collection<SessionCollection> sessions;
 
+        /// <summary>
+        /// The server on which this data was collected.
+        /// </summary>
         private string serverName;
         
         /// <summary>
-        /// Gets the name of the server for this image.
+        /// The faction on which this data was collected.
         /// </summary>
-        public string ServerName {
-            get { return serverName; }
-        }
-
         private string faction;
-        
-        /// <summary>
-        /// Gets the name of the faction for this image.
-        /// </summary>
-        public string Faction {
-            get { return faction; }
-        }
 
         /// <summary>
-        /// Initializes an instance of the ScanImage class with the
+        /// Initializes a new instance of the ScanImage class with the
         /// data from a LuaTable.
         /// </summary>
         /// <param name="data">
@@ -81,32 +68,80 @@ namespace AuctioneerSharp
             this.faction = fact;
             this.Initialize();
         }
+        
+        /// <summary>
+        /// Gets the name of the server for this image.
+        /// </summary>
+        /// <value>
+        /// A string which is the name of the server.
+        /// </value>
+        public string ServerName {
+            get { return this.serverName; }
+        }
+        
+        /// <summary>
+        /// Gets a collection of scan sessions in this image.
+        /// </summary>
+        /// <value>
+        /// A collection of <see cref="SessionCollection" /> objects.
+        /// </value>
+        public Collection<SessionCollection> Sessions {
+            get { return this.sessions; }
+        }
+        
+        /// <summary>
+        /// Gets a collection of statistics about this image.
+        /// </summary>
+        /// <value>
+        /// A collection of <see cref="ScanStatisticItem" />s.
+        /// </value>
+        public ScanStatisticsCollection Statistics {
+            get { return this.scanStats; }
+        }
+        
+        /// <summary>
+        /// Gets the name of the faction for this image.
+        /// </summary>
+        /// <value>
+        /// A string which is the name of the faction.
+        /// </value>
+        public string Faction {
+            get { return this.faction; }
+        }
 
+        /// <summary>
+        /// Initializes the data members of the object.
+        /// </summary>
         private void Initialize() {
-            foreach(DictionaryEntry entry in scanData) {
-                if(entry.Key.Equals(Constants.ImageStatsKey))
-                    scanStats = new ScanStatisticsCollection(scanData[Constants.ImageStatsKey] as LuaTable);
-                //if(entry.Key.Equals(Constants.ImageTypeKey))
-                    //image = scanData[Constants.ImageTypeKey].ToString();
-                if(entry.Key.Equals(Constants.ImageRopesKey))
-                    ropes = scanData[Constants.ImageRopesKey] as LuaTable;
-                //if(entry.Key.Equals(Constants.ImageLastScanKey))
-                    //lastScanTime = (double)scanData[Constants.ImageLastScanKey];
-                //if(entry.Key.Equals(Constants.ImageTimeKey))
-                    //time = (double)scanData[Constants.ImageTimeKey];
+            foreach (DictionaryEntry entry in this.scanData) {
+                if (entry.Key.Equals(Constants.ImageStatsKey)) {
+                    this.scanStats = new ScanStatisticsCollection(this.scanData[Constants.ImageStatsKey] as LuaTable);
+                }
+                ////if(entry.Key.Equals(Constants.ImageTypeKey))
+                    ////image = scanData[Constants.ImageTypeKey].ToString();
+                if (entry.Key.Equals(Constants.ImageRopesKey)) {
+                    this.ropes = this.scanData[Constants.ImageRopesKey] as LuaTable;
+                }
+                ////if(entry.Key.Equals(Constants.ImageLastScanKey))
+                   ////lastScanTime = (double)scanData[Constants.ImageLastScanKey];
+                ////if(entry.Key.Equals(Constants.ImageTimeKey))
+                    ////time = (double)scanData[Constants.ImageTimeKey];
             }
 
             this.BuildSessions();
         }
 
+        /// <summary>
+        /// Builds the <see cref="SessionCollection" /> objects from the data.
+        /// </summary>
         private void BuildSessions() {
             // initialize a new list
-            sessions = new Collection<SessionCollection>();
+            this.sessions = new Collection<SessionCollection>();
 
             // load the list if there's data
-            if(ropes!=null) {
-                foreach(DictionaryEntry rope in ropes) {
-                    sessions.Add(new SessionCollection(rope.Value.ToString()));
+            if (this.ropes != null) {
+                foreach (DictionaryEntry rope in this.ropes) {
+                    this.sessions.Add(new SessionCollection(rope.Value.ToString()));
                 }
             }
         }

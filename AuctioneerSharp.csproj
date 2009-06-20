@@ -73,9 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScanImage.cs" />
     <Compile Include="ScanStatisticItem.cs" />
-    <Compile Include="ScanStatistics.cs">
+    <Compile Include="ScanStatisticsCollection.cs">
     </Compile>
-    <Compile Include="Session.cs" />
+    <Compile Include="SessionCollection.cs" />
     <EmbeddedResource Include="Constants.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
