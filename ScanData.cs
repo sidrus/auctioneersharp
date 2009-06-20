@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ScanData.cs" company="Ejafi Software">
-//      Copyright (c) 2009 All Right Reserved
+//      Copyright (c) Ejafi Software. All Rights Reserved.
 // </copyright>
 // <author>Brandon Frie</author>
 // <date>6/17/2009</date>

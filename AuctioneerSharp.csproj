@@ -9,7 +9,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SourceAnalysisOverrideSettingsFile>C:\Users\Brandon\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
-    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <RunCodeAnalysis>True</RunCodeAnalysis>
     <CodeAnalysisRules>-Microsoft.Design#CA1014;-Microsoft.Globalization#CA1300;-Microsoft.Globalization#CA1301;-Microsoft.Globalization#CA1302;-Microsoft.Globalization#CA1304;-Microsoft.Globalization#CA1305;-Microsoft.Globalization#CA1306;-Microsoft.Globalization#CA1307;-Microsoft.Globalization#CA1308;-Microsoft.Globalization#CA1309;-Microsoft.Globalization#CA2101</CodeAnalysisRules>
     <DocumentationFile>bin\Debug\AuctioneerSharp.xml</DocumentationFile>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
@@ -50,6 +50,9 @@
     <Reference Include="LuaInterface">
       <HintPath>..\LuaInterface.dll</HintPath>
     </Reference>
+    <Reference Include="NUnit.Framework">
+      <HintPath>$(SharpDevelopBinPath)\Tools\NUnit\NUnit.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -76,8 +79,16 @@
     <Compile Include="ScanStatisticsCollection.cs">
     </Compile>
     <Compile Include="SessionCollection.cs" />
+    <Compile Include="UnitTests\AuctionItemTest.cs" />
     <EmbeddedResource Include="Constants.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <None Include="UnitTests\data\test_data.lua">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UnitTests" />
+    <Folder Include="UnitTests\data" />
   </ItemGroup>
 </Project>
