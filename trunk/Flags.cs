@@ -5,7 +5,7 @@
 // <author>Brandon Frie</author>
 // <date>6/19/2009</date>
 // <summary>
-//      Defines an individual item in an Auctioneer scan image.
+//      Auction scan status flags for Auctioneer records.
 // </summary>
 //-----------------------------------------------------------------------
 namespace AuctioneerSharp

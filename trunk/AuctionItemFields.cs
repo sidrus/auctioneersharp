@@ -5,7 +5,7 @@
 // <author>Brandon Frie</author>
 // <date>6/18/2009</date>
 // <summary>
-//      Defines an individual item in an Auctioneer scan image.
+//      Specifies the index of the AuctionItem field in an Auctioneer scan item.
 // </summary>
 //-----------------------------------------------------------------------
 namespace AuctioneerSharp
